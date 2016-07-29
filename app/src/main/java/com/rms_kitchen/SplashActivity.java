@@ -1,28 +1,18 @@
 package com.rms_kitchen;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import org.xmlpull.v1.XmlPullParserException;
-
-
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.DownloadManager;
 import android.app.AlertDialog.Builder;
+import android.app.DownloadManager;
 import android.app.DownloadManager.Request;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.IntentFilter;
-import android.content.SharedPreferences;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -38,7 +28,14 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class SplashActivity extends Activity{
 	private UpdateInfo info;
@@ -54,17 +51,13 @@ public class SplashActivity extends Activity{
 	private String componentName = "com.rms_kitchen";
 	private String componentActivityName = "com.rms_kitchen.MainActivity";
 	protected static final String TAG = "SplashActivity";
-	
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
 		this.tv_splash_version = (TextView) this.findViewById(R.id.tv_splash_version);
 		this.tv_splash_version.setText("Version："+getVersion());
-		
-		
-		
-		
 	}
 	
 	private class CheckVersionTask implements Runnable{
@@ -127,19 +120,19 @@ public class SplashActivity extends Activity{
 		public void handleMessage(Message msg) {
 			switch (msg.what) {
 			case XML_PARSER_ERROR:
-				Toast.makeText(getApplicationContext(), "XML parsing exception", Toast.LENGTH_LONG).show();
+			//	Toast.makeText(getApplicationContext(), "XML parsing exception", Toast.LENGTH_LONG).show();
 				loadMainUI();
 				break;
 			case IO_ERROR:
-				Toast.makeText(getApplicationContext(), "IO exception", Toast.LENGTH_LONG).show();
+			//	Toast.makeText(getApplicationContext(), "IO exception", Toast.LENGTH_LONG).show();
 				loadMainUI();
 				break;
 			case SERVER_URL_ERROR:
-				Toast.makeText(getApplicationContext(), "Server URL error", Toast.LENGTH_LONG).show();
+				//Toast.makeText(getApplicationContext(), "Server URL error", Toast.LENGTH_LONG).show();
 				loadMainUI();
 				break;
 			case SERVER_ERROR:
-				Toast.makeText(getApplicationContext(), "Server exception", Toast.LENGTH_LONG).show();
+				//Toast.makeText(getApplicationContext(), "Server exception", Toast.LENGTH_LONG).show();
 				loadMainUI();
 				break;
 			case GET_INFO_SUCCESS:
@@ -172,7 +165,7 @@ public class SplashActivity extends Activity{
 			startActivity(mIntent);
 			finish(); 
 		}catch(Exception ex){
-			Toast.makeText(getApplicationContext(), "First installation, must be upgrade!", Toast.LENGTH_LONG).show();
+			//Toast.makeText(getApplicationContext(), "First installation, must be upgrade!", Toast.LENGTH_LONG).show();
 			showUpdateDialog();
 		}
 		
@@ -333,6 +326,6 @@ public class SplashActivity extends Activity{
 		unregisterReceiver(receiver);
 		
 	}
-	
-	
+
+
 }
