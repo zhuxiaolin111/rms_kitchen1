@@ -2,12 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.rms_counter.MainActivity" >
-
-    <WebView
+    tools:context="com.rms_kitchen.MainActivity" >
+    <org.xwalk.core.XWalkView
         android:id="@+id/webView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
          />
-
 </RelativeLayout>

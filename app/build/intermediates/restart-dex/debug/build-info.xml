@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="armeabi-v7a,armeabi"
-    api-level="22"
-    density="xxhdpi"
+    api-level="19"
+    density="mdpi"
     format="7"
-    timestamp="21760846501653"
+    timestamp="12840534741782"
     token="-1756531339767645233" >
 
     <task
@@ -20,6 +20,6 @@
         name="verifier"
         duration="0" />
 
-    <build timestamp="21760846501653" />
+    <build timestamp="12840534741782" />
 
 </instant-run>
