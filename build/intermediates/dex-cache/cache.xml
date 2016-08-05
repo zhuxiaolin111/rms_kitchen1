@@ -5,15 +5,8 @@
         jar="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         revision="24.0.1"
-        sha1="5515d6704253b6a244160c8c427a51425fcda9b7">
+        sha1="2fc0c735b1106169ea572751e5d26ebe4fcc7724">
         <dex dex="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_c1db281f500c93711b084824fbfacb543484ae03.jar" />
-    </item>
-    <item
-        jar="C:\Users\Administrator\Desktop\rms_kitchen1\app\libs\xwalk_core_library_java.jar"
-        jumboMode="true"
-        revision="24.0.1"
-        sha1="185d07b8648a5ca9cf122a83401d55cee1433e4b">
-        <dex dex="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\pre-dexed\debug\xwalk_core_library_java_e2d024122ab006c15628e20343b03af24087a76a.jar" />
     </item>
     <item
         jar="C:\Users\Administrator\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\24.0.0\2943c74db6d4346ab8c6531adac91fa05c137c40\support-annotations-24.0.0.jar"
@@ -23,13 +16,6 @@
         <dex dex="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0_170a33ba025e7388493b8e76c041cf4d64a29a8a.jar" />
     </item>
     <item
-        jar="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
-        jumboMode="true"
-        revision="24.0.1"
-        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
-        <dex dex="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0_16705845d512516e641a7418c2bbc1b2b4bb0242.jar" />
-    </item>
-    <item
         jar="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
         jumboMode="true"
         revision="24.0.1"
@@ -37,10 +23,17 @@
         <dex dex="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0_9e672e3f6e894d88daa6ba1aaf6b53a8231bc567.jar" />
     </item>
     <item
+        jar="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="24.0.1"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0_16705845d512516e641a7418c2bbc1b2b4bb0242.jar" />
+    </item>
+    <item
         jar="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="24.0.1"
-        sha1="08e68a596ef5223b1064285982fc9415620308db">
+        sha1="d745ec106cc15d12132aa35f5bd277964108a06d">
         <dex dex="C:\Users\Administrator\Desktop\rms_kitchen1\app\build\intermediates\pre-dexed\debug\instant-run_494c552566621368b5758b1581b44deef3788ded.jar" />
     </item>
     <item

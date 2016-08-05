@@ -1,18 +1,23 @@
 package com.rms_kitchen;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.WebView;
 
 import org.xwalk.core.XWalkPreferences;
+import org.xwalk.core.XWalkResourceClient;
+import org.xwalk.core.XWalkSettings;
+import org.xwalk.core.XWalkUIClient;
 import org.xwalk.core.XWalkView;
 
 public class MainActivity extends Activity {
 
     private XWalkView mXWalkView;
-     XWalkPreferences xWalkPreferences;
+    XWalkPreferences xWalkPreferences;
     private WebView mWebView;
     private UsbAdmin mUsbAdmin;
     private PrinterUtils pt;
@@ -34,11 +39,13 @@ public class MainActivity extends Activity {
 
     public void startApp() {
         mXWalkView = (XWalkView) findViewById(R.id.webView);
-        //XWalkSettings settings = mXWalkView.getSettings();
-     /*   settings.setJavaScriptEnabled(true);
+        XWalkSettings settings = mXWalkView.getSettings();
+        mXWalkView.load("javascript:document.body.contentEditable=true;", null);
+
+    /*   settings.setJavaScriptEnabled(true);
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
         settings.setAppCacheEnabled(true);
-        settings.setCacheMode(MODE_MULTI_PROCESS);
+        settings.setCacheMode(MODE_MULTI_PROCESS);*/
         mXWalkView.addJavascriptInterface(new JsInterface(this, mUsbAdmin), "kp");
         mXWalkView.setUIClient(new XWalkUIClient(mXWalkView));
         mXWalkView.setResourceClient(new XWalkResourceClient(mXWalkView));
@@ -50,7 +57,7 @@ public class MainActivity extends Activity {
         } else {
             appLang = "english";
         }
-        Log.d("TESTURL:", siteUrl);*/
+        Log.d("TESTURL:", siteUrl);
         mXWalkView.load(siteUrl + "?appLang=" + appLang, null);
 
         //  mWebView = (WebView) findViewById(R.id.webView);
@@ -84,6 +91,9 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         mUsbAdmin.Closeusb();
+        if (mXWalkView != null) {
+            mXWalkView.onDestroy();
+        }
         super.onDestroy();
     }
 
@@ -97,5 +107,28 @@ public class MainActivity extends Activity {
     }
 
     private static MainActivity mainActivity;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mXWalkView != null) {
+            mXWalkView.resumeTimers();
+            mXWalkView.onShow();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (mXWalkView != null) {
+            mXWalkView.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        if (mXWalkView != null) {
+            mXWalkView.onNewIntent(intent);
+        }
+    }
 
 }

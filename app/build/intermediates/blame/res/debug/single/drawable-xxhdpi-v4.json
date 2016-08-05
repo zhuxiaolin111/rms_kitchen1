@@ -1,6 +1,22 @@
 [
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\verify_checkmark.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\build\\intermediates\\exploded-aar\\rms_kitchen1\\xwalk_core_library-17.46.448.10-arm\\unspecified\\res\\drawable-xxhdpi\\verify_checkmark.png"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_menu_share_holo_light.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\build\\intermediates\\exploded-aar\\rms_kitchen1\\xwalk_core_library-17.46.448.10-arm\\unspecified\\res\\drawable-xxhdpi\\ic_menu_share_holo_light.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_search.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\build\\intermediates\\exploded-aar\\rms_kitchen1\\xwalk_core_library-17.46.448.10-arm\\unspecified\\res\\drawable-xxhdpi\\ic_search.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_warning.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\rms_kitchen1\\app\\build\\intermediates\\exploded-aar\\rms_kitchen1\\xwalk_core_library-17.46.448.10-arm\\unspecified\\res\\drawable-xxhdpi\\ic_warning.png"
     }
 ]

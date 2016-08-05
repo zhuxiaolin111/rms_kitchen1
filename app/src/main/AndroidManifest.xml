@@ -42,10 +42,10 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:hardwareAccelerated="true">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name">
@@ -61,10 +61,9 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape">
-            <!--    <intent-filter>
-                    <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
-                </intent-filter>-->
-            <!--     <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />-->
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
         </activity>
     </application>
 

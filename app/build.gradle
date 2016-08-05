@@ -1,17 +1,19 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 20
+    compileSdkVersion 21
     buildToolsVersion "24.0.1"
 
     defaultConfig {
         applicationId "com.rms_kitchen"
         minSdkVersion 19
-        targetSdkVersion 22
+        targetSdkVersion 21
     }
 
     buildTypes {
         release {
+            apply plugin: 'idea'
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
@@ -21,5 +23,6 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:24.0.0'
     compile files('libs/usbsdk.jar')
-    compile files('libs/xwalk_core_library_java.jar')
+    compile project(':xwalk_core_library-17.46.448.10-arm')
+    
 }
